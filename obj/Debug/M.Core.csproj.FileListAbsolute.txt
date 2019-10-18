@@ -1,0 +1,17 @@
+D:\Githb\M.Core\bin\Debug\M.Core.dll.config
+D:\Githb\M.Core\bin\Debug\M.Core.dll
+D:\Githb\M.Core\bin\Debug\M.Core.pdb
+D:\Githb\M.Core\bin\Debug\AutoMapper.dll
+D:\Githb\M.Core\bin\Debug\System.IO.dll
+D:\Githb\M.Core\bin\Debug\System.Runtime.dll
+D:\Githb\M.Core\bin\Debug\System.Threading.Tasks.dll
+D:\Githb\M.Core\bin\Debug\AutoMapper.xml
+D:\Githb\M.Core\bin\Debug\System.IO.xml
+D:\Githb\M.Core\bin\Debug\System.Runtime.xml
+D:\Githb\M.Core\bin\Debug\System.Threading.Tasks.xml
+D:\Githb\M.Core\obj\Debug\M.Core.csproj.App.config
+D:\Githb\M.Core\obj\Debug\M.Core.csprojAssemblyReference.cache
+D:\Githb\M.Core\obj\Debug\M.Core.csproj.CoreCompileInputs.cache
+D:\Githb\M.Core\obj\Debug\M.Core.csproj.CopyComplete
+D:\Githb\M.Core\obj\Debug\M.Core.dll
+D:\Githb\M.Core\obj\Debug\M.Core.pdb
