@@ -10,7 +10,7 @@
         /// </summary>
         /// <param name="d">.</param>
         /// <returns></returns>
-        public static string WithoutZero(this decimal d)
+        public static string WithoutEndZero(this double d)
         {
             return d.ToString("G0");
         }

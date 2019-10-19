@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace M.Core.Extensions
+﻿namespace M.Core.Extensions
 {
-    class DecimalExtensions
+    public static class DecimalExtensions
     {
+        /// <summary>
+        /// 转化成double去掉末尾0
+        /// </summary>
+        /// <param name="d">.</param>
+        /// <returns></returns>
+        public static string WithoutEndZero(this decimal d)
+        {
+            return d.ToString("G0");
+        }
     }
 }

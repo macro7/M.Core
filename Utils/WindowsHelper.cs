@@ -680,6 +680,11 @@ namespace M.Core.Utils
             return p.StandardOutput.ReadToEnd();        //從輸出流取得命令執行結果
         }
 
-
+        /// <summary>
+        /// 鼠标显示隐藏
+        /// </summary>
+        /// <param name="status">1：显示；0：隐藏</param>
+        [DllImport("user32.dll", EntryPoint = "ShowCursor", CharSet = CharSet.Auto)]
+        public static extern void ShowCursor(int status);
     }
 }

@@ -34,18 +34,37 @@
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.4.1.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\NPOI.Excel\bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\NPOI.Excel\bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\NPOI.Excel\bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\NPOI.Excel\bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,7 +77,26 @@
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\DecimalExtensions.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Utils\DateTimeHelper.cs" />
+    <Compile Include="Utils\IDCardHelper.cs" />
+    <Compile Include="Utils\MD5Helper.cs" />
+    <Compile Include="Utils\NPOIHelper.cs" />
+    <Compile Include="Utils\AnimateWindowForm.cs" />
     <Compile Include="Utils\AutoMapHelper.cs" />
+    <Compile Include="Utils\RMBUtils.cs" />
+    <Compile Include="Utils\ImagePrintHelper.cs" />
+    <Compile Include="Utils\ColorHelper.cs" />
+    <Compile Include="Utils\ConfigHelper.cs" />
+    <Compile Include="Utils\CSVHelper.cs" />
+    <Compile Include="Utils\FileDialogHelper.cs" />
+    <Compile Include="Utils\ImageHelper.cs" />
+    <Compile Include="Utils\RandomHelper.cs" />
+    <Compile Include="Utils\RegEditHelper.cs" />
+    <Compile Include="Utils\RegexConstCharater.cs" />
+    <Compile Include="Utils\ConvertHelper.cs" />
+    <Compile Include="Utils\Cryptography.cs" />
+    <Compile Include="Utils\DataSetHelper.cs" />
     <Compile Include="Utils\GDI.cs" />
     <Compile Include="Extensions\LinqExtension.cs" />
     <Compile Include="Extensions\MySqlConnectionExtensions.cs" />
