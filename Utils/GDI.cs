@@ -7,7 +7,7 @@ namespace M.Core.Utils
     /// <summary>
     /// GDI操作辅助类
     /// </summary>
-    public static class GDI
+    public sealed class GDI
     {
         [DllImport("gdi32.dll")]
         public static extern bool BitBlt(IntPtr hdc, int nXDest, int nYDest, int nWidth, int nHeight, IntPtr hdcSrc, int nXSrc, int nYSrc, CopyPixelOperation dwRop);

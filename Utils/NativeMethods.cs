@@ -9,7 +9,7 @@ namespace M.Core.Utils
     /// <summary>
     /// 包含互操作方法调用的应用程序中使用。
     /// </summary>
-    public sealed class NativeMethods
+    sealed class NativeMethods
     {
         /// 私有构造函数，而不是用于实例
         private NativeMethods()
@@ -33,6 +33,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("User32.dll")]
         public static extern Boolean MessageBeep(UInt32 beepType);
+
         /// <summary>
         /// 设置由不同线程产生的窗口的显示状态
         /// ShowWindowAsync(this.Handle, 1);
@@ -50,6 +51,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("user32.dll")]
         public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+
         /// <summary>
         /// 确定给定窗口是否是最小化（图标化）的窗口
         /// </summary>

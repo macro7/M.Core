@@ -6,7 +6,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-
 namespace M.Core.Utils
 {
     public class WindowsHelper
@@ -148,9 +147,28 @@ namespace M.Core.Utils
 
         [DllImport("User32.dll")]
         private static extern bool ShowWindowAsync(System.IntPtr hWnd, int cmdShow);
+
+        /// <summary>
+        /// 设置指定窗体前置
+        /// </summary>
+        /// <param name="hWnd"></param>
+        /// <returns></returns>
         [DllImport("User32.dll")]
-        private static extern bool SetForegroundWindow(System.IntPtr hWnd);
+        public static extern bool SetForegroundWindow(System.IntPtr hWnd);
         private const int WS_SHOWNORMAL = 1;
+
+        /// <summary>
+        /// 将被激活的最顶层窗口
+        /// </summary>
+        /// <param name="hWnd">窗口的句柄</param>
+        /// <returns>若函数调用成功，则返回原先活动窗口的句柄。若函数调用失败，则返回值为NULL。若要获得更多错误信息，可以调用GetLastError函数。</returns>
+        [DllImport("user32.dll")]
+        public static extern IntPtr SetActiveWindow(IntPtr hWnd);
+        public static void ActivateWindow(IntPtr handle)
+        {
+            SetForegroundWindow(handle);
+            SetActiveWindow(handle);
+        }
 
         #endregion 
 
@@ -162,12 +180,14 @@ namespace M.Core.Utils
             public long Luid;
             public int Attr;
         }
+
         /// <summary>
         /// 获取当前进程
         /// </summary>
         /// <returns></returns>
         [DllImport("kernel32.dll", ExactSpelling = true)]
         internal static extern IntPtr GetCurrentProcess();
+
         /// <summary>
         /// 提升进程权限
         /// </summary>
@@ -177,6 +197,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("advapi32.dll", ExactSpelling = true, SetLastError = true)]
         internal static extern bool OpenProcessToken(IntPtr h, int acc, ref IntPtr phtok);
+
         /// <summary>
         /// 查看系统权限的特权值，返回信息到一个LUID结构体里
         /// </summary>
@@ -186,6 +207,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("advapi32.dll", SetLastError = true)]
         internal static extern bool LookupPrivilegeValue(string host, string name, ref long pluid);
+
         /// <summary>
         /// 启用或禁止 指定访问令牌的特权
         /// </summary>
@@ -204,6 +226,7 @@ namespace M.Core.Utils
         /// <returns>如果这个函数成功,返回非0.为了确定这个函数是否修改了所有指定的特权,可以调用GetLastError函数,当这个函数返回下面的值之一时就代表函数成功: </returns>
         [DllImport("advapi32.dll", ExactSpelling = true, SetLastError = true)]
         internal static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges, ref TokPriv1Luid NewState, int BufferLength, IntPtr PreviousState, IntPtr ReturnLength);
+
         /// <summary>
         /// 退出、重启或注销系统
         /// </summary>
@@ -320,6 +343,7 @@ namespace M.Core.Utils
 
         #endregion
 
+        #region 杀进程
 
         /// <summary>
         /// 杀进程
@@ -355,6 +379,10 @@ namespace M.Core.Utils
             }
             catch { }
         }
+        #endregion
+
+        #region 调用系统API切换应用程序
+
         #region 调用系统API（系统快捷键 Alt+Tab）切换应用程序
         /// <summary>
         /// 调用系统API（系统快捷键 Alt+Tab）切换应用程序
@@ -454,6 +482,7 @@ namespace M.Core.Utils
             }
         }
         #endregion
+
         /// <summary>
         /// 
         /// </summary>
@@ -562,6 +591,7 @@ namespace M.Core.Utils
                 Logger.WriteErrorLog(e);
             }
         }
+        #endregion
 
         #region 内存回收
         /// <summary>
