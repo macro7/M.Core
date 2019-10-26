@@ -5,7 +5,46 @@ namespace M.Core.Extensions
 {
     public static class StringExtensions
     {
-        #region 时间格式
+        /// <summary>
+        /// 转换Int
+        /// </summary>
+        /// <param name="s">The s.</param>
+        /// <returns><c>true</c> if [is date time] [the specified is date time]; otherwise, <c>false</c>.</returns>
+        public static int? ToInt(this string s)
+        {
+            if (int.TryParse(s, out int result))
+            {
+                return result;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 转换为日期
+        /// </summary>
+        /// <param name="data">数据</param>
+        /// <returns>DateTime.</returns>
+        public static DateTime ToDate(this string data)
+        {
+            try
+            {
+                if (data == null)
+                {
+                    return DateTime.MinValue;
+                }
+
+                if (System.Text.RegularExpressions.Regex.IsMatch(data?.ToString(), @"^\d{8}$"))
+                {
+                    return new DateTime(data.Substring(0, 4).ToInt().Value, data.Substring(4, 2).ToInt().Value, data.Substring(6, 2).ToInt().Value);
+                }
+                return DateTime.TryParse(data.ToString(), out DateTime result) ? result : DateTime.MinValue;
+            }
+            catch
+            {
+                return DateTime.MinValue;
+            }
+        }
+
         /// <summary>
         /// 校验字符串是否是时间格式
         /// </summary>
@@ -111,7 +150,7 @@ namespace M.Core.Extensions
         /// </summary>
         /// <param name="s">The s.</param>
         /// <returns><c>true</c> if [is date time] [the specified is date time]; otherwise, <c>false</c>.</returns>
-        public static string WithoutEndZero(this string s)
+        public static string WithoutEndEndZero(this string s)
         {
             if (decimal.TryParse(s, out decimal result))
             {
@@ -148,7 +187,7 @@ namespace M.Core.Extensions
         /// <returns>返回字符串</returns>
         public static string RealMid(this string str, int iStrart, int iLength)
         {
-            string rStr = "";
+            string rStr;
             try
             {
                 int len = 0;
@@ -162,11 +201,11 @@ namespace M.Core.Extensions
                     }
                     if (str[j] >= 0x3000 && str[j] <= 0x9FFF)
                     {
-                        len = len + 2;
+                        len += 2;
                     }
                     else
                     {
-                        len = len + 1;
+                        len += 1;
                     }
 
                 }

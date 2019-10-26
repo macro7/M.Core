@@ -48,7 +48,7 @@ namespace M.Core.Utils
             string strline = null;
             string[] aryline;
 
-            using (StreamReader reader = new StreamReader(csvPath, FileUtils.GetEncoding(csvPath)))
+            using (StreamReader reader = new StreamReader(csvPath, FileHelper.GetEncoding(csvPath)))
             {
                 while (!string.IsNullOrEmpty((strline = reader.ReadLine())))
                 {
@@ -115,4 +115,3 @@ namespace M.Core.Utils
     }
 }
 
-}

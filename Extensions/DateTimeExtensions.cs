@@ -69,7 +69,7 @@ namespace M.Core.Extensions
         }
 
         /// <summary>
-        /// 获取本个月的第一天
+        /// 获取月的第一天
         /// DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + "1";
         /// </summary>
         /// <returns></returns>
@@ -79,7 +79,7 @@ namespace M.Core.Extensions
         }
 
         /// <summary>
-        /// 获取本个月的最后一天
+        /// 获取月的最后一天
         /// 这个处理有异常.
         /// DateTime.Parse(DateTime.Now.Year.ToString() +
         /// DateTime.Now.Month.ToString() + "1").AddMonths(1).AddDays(-1).ToShortDateString();

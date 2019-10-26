@@ -262,6 +262,15 @@ namespace M.Core.Utils
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
         /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hWnd">The h WND.</param>
+        /// <param name="msg">The MSG.</param>
+        /// <param name="wParam">The w parameter.</param>
+        /// <param name="lParam">The l parameter.</param>
+        [DllImport("user32.dll")]
+        public static extern void SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        /// <summary>
         /// 将被激活的最顶层窗口
         /// </summary>
         /// <param name="hWnd">窗口的句柄</param>
@@ -389,10 +398,10 @@ namespace M.Core.Utils
 
         public struct BLENDFUNCTION
         {
-            public byte BlendOp;
-            public byte BlendFlags;
-            public byte SourceConstantAlpha;
-            public byte AlphaFormat;
+            public byte BlendOp { get; set; }
+            public byte BlendFlags { get; set; }
+            public byte SourceConstantAlpha { get; set; }
+            public byte AlphaFormat { get; set; }
         }
 
         /// <summary>Enumeration of the different ways of showing a window using

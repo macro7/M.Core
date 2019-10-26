@@ -1229,5 +1229,3 @@ namespace M.Core.Utils
         #endregion
     }
 }
-
-}
