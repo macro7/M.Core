@@ -9,7 +9,7 @@ namespace M.Core.Utils
     /// <summary>
     /// 包含互操作方法调用的应用程序中使用。
     /// </summary>
-    public sealed class NativeMethods
+    sealed class NativeMethods
     {
         /// 私有构造函数，而不是用于实例
         private NativeMethods()
@@ -33,6 +33,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("User32.dll")]
         public static extern Boolean MessageBeep(UInt32 beepType);
+
         /// <summary>
         /// 设置由不同线程产生的窗口的显示状态
         /// ShowWindowAsync(this.Handle, 1);
@@ -50,6 +51,7 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("user32.dll")]
         public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+
         /// <summary>
         /// 确定给定窗口是否是最小化（图标化）的窗口
         /// </summary>
@@ -260,6 +262,15 @@ namespace M.Core.Utils
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
         /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hWnd">The h WND.</param>
+        /// <param name="msg">The MSG.</param>
+        /// <param name="wParam">The w parameter.</param>
+        /// <param name="lParam">The l parameter.</param>
+        [DllImport("user32.dll")]
+        public static extern void SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        /// <summary>
         /// 将被激活的最顶层窗口
         /// </summary>
         /// <param name="hWnd">窗口的句柄</param>
@@ -387,10 +398,10 @@ namespace M.Core.Utils
 
         public struct BLENDFUNCTION
         {
-            public byte BlendOp;
-            public byte BlendFlags;
-            public byte SourceConstantAlpha;
-            public byte AlphaFormat;
+            public byte BlendOp { get; set; }
+            public byte BlendFlags { get; set; }
+            public byte SourceConstantAlpha { get; set; }
+            public byte AlphaFormat { get; set; }
         }
 
         /// <summary>Enumeration of the different ways of showing a window using

@@ -60,6 +60,7 @@ namespace M.Core.Extensions
             Mapper.CreateMap<TSource, TDestination>();
             return Mapper.Map(source, destination);
         }
+
         /// <summary>
         /// DataReader映射
         /// </summary>

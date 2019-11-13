@@ -19,6 +19,18 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("winmm.dll")]
         private static extern long mciSendString(string strCommand, System.Text.StringBuilder strReturn, int iReturnLength, IntPtr hwndCallback);
+
+        /// <summary>
+        /// PlaySound API可以用来播放一个WAV文件。长期需要根据映射表加以固定。
+        /// PlaySound("c:\\win95\\media\\The Microsoft Sound.wav", 0,0);
+        /// </summary>
+        /// <param name="lpszName"></param>
+        /// <param name="hModule"></param>
+        /// <param name="dwFlags"></param>
+        /// <returns></returns>
+        [DllImport("winmm.dll")]
+        public static extern long PlaySound(string lpszName, long hModule, long dwFlags);
+
         /// <summary>
         /// 播放
         /// </summary>

@@ -1,5 +1,7 @@
-﻿using System.Drawing.Printing;
+﻿using System.Drawing;
+using System.Drawing.Printing;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace M.Core.Utils
 {
@@ -35,8 +37,6 @@ namespace M.Core.Utils
         /// <returns></returns>
         public static bool ExistsPrinterName(string printerName)
         {
-            PrintDocument prtdoc = new PrintDocument();
-            string strDefaultPrinter = prtdoc.PrinterSettings.PrinterName;//获取默认的打印机名
             foreach (string ss in PrinterSettings.InstalledPrinters)
             {
                 //在列表框中列出所有的打印机,
@@ -55,5 +55,31 @@ namespace M.Core.Utils
         /// <returns></returns>
         [DllImport("winspool.drv", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern long SetDefaultPrinter(string printerName);
+
+        ///// <summary>
+        ///// 弹出打印窗体的预览对话框
+        ///// </summary>
+        ///// <param name="form">窗体对象</param>
+        //public static void Print(Form form)
+        //{
+        //    ScreenCapture capture = new ScreenCapture();
+        //    Image image = capture.CaptureWindow(form.Handle);
+        //    ImagePrintHelper helper = new ImagePrintHelper(image);
+        //    helper.PrintPreview();
+        //}
+
+        ///// <summary>
+        ///// 打印窗体控件
+        ///// </summary>
+        ///// <param name="control">控件对象</param>
+        //public static void Print(Control control)
+        //{
+        //    ScreenCapture capture = new ScreenCapture();
+        //    Image image = capture.CaptureWindow(control.Handle);
+
+        //    ImagePrintHelper helper = new ImagePrintHelper(image);
+        //    helper.PrintPreview();
+        //}
+
     }
 }

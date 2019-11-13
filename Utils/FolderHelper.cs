@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace M.Core.Utils
+﻿namespace M.Core.Utils
 {
     class FolderHelper
     {
