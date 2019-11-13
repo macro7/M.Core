@@ -32,7 +32,6 @@ D:\Githb\M.Core\obj\Debug\M.Core.Forms.FrmTips.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Forms.FrmWaiting.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Properties.Resources.resources
 D:\Githb\M.Core\obj\Debug\M.Core.csproj.GenerateResource.cache
-D:\Githb\M.Core\obj\Debug\M.Core.csproj.CoreCompileInputs.cache
 D:\Githb\M.Core\obj\Debug\M.Core.csproj.CopyComplete
 D:\Githb\M.Core\obj\Debug\M.Core.dll
 D:\Githb\M.Core\obj\Debug\M.Core.pdb
@@ -68,7 +67,6 @@ D:\Githb\M.Core\obj\Debug\M.Core.Controls.UCDatePicker.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Controls.UCDropDownButton.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Controls.TextBoxTransparent.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Controls.UCTextBox.resources
-D:\Githb\M.Core\obj\Debug\M.Core.csprojAssemblyReference.cache
 D:\Githb\M.Core\obj\Debug\M.Core.Forms.FrmQuestion2.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Forms.FrmQuestion1.resources
 D:\Githb\M.Core\obj\Debug\M.Core.Forms.FrmWithOKCancel1.resources

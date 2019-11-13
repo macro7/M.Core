@@ -22,7 +22,7 @@ namespace M.Core.Controls
         /// <summary>
         /// The font
         /// </summary>
-        private Font _Font = new Font("微软雅黑", 12);
+        private Font _Font = new Font("微软雅黑", 9);
         /// <summary>
         /// 获取或设置控件显示的文字的字体。
         /// </summary>

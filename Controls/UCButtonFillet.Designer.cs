@@ -40,7 +40,7 @@
             // 
             this.lbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl.Image = global::M.Core.Properties.Resources.alarm;
+            this.lbl.Image = global::M.Core.Properties.Resources.help;
             this.lbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl.Location = new System.Drawing.Point(0, 0);
             this.lbl.Name = "lbl";
@@ -51,15 +51,15 @@
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseDown);
             // 
-            // UCBtnFillet
+            // UCButtonFillet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.ConerRadius = 5;
             this.Controls.Add(this.lbl);
-            this.IsShowRect = true;
             this.IsRadius = true;
-            this.Name = "UCBtnFillet";
+            this.IsShowRect = true;
+            this.Name = "UCButtonFillet";
             this.Size = new System.Drawing.Size(120, 76);
             this.ResumeLayout(false);
 

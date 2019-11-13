@@ -78,7 +78,7 @@ namespace M.Core.Forms
         /// <param name="intSleep">The int sleep.</param>
         public void ShowForm(int intSleep = 1)
         {
-            base.Opacity = 0.0;
+            base.Opacity = 0.9;
             if (intSleep <= 0)
             {
                 intSleep = 1;

@@ -91,18 +91,11 @@
         }
 
         #endregion
-
-        /// <summary>
-        /// The label title
-        /// </summary>
-        private System.Windows.Forms.Label lblTitle;
         /// <summary>
         /// The uc split line h1
         /// </summary>
         private Controls.UCSplitLine_H ucSplitLine_H1;
-        /// <summary>
-        /// The BTN close
-        /// </summary>
-        private System.Windows.Forms.Panel btnClose;
+        public System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.Panel btnClose;
     }
 }
